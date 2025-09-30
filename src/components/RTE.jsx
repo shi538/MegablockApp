@@ -2,6 +2,7 @@
 import React from 'react'
 import { Controller } from 'react-hook-form'
 import {Editor} from '@tinymce/tinymce-react'
+import conf from '../conf/conf'
 export default  function RTE({
     name, control, lable, defaultValue = ""
 }) {
@@ -18,6 +19,7 @@ export default  function RTE({
              apiKey='xp5gm9ahgzgkudg5s9a3sr1hi4b7a38u1zkg3x4eux5xg4r3'
             init={{
             initialValue: defaultValue,
+            apiKey:conf.appwriteTinyMCEId,
             height: 500,
             menubar: true,
             plugins: [
